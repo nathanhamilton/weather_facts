@@ -1,0 +1,50 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://geocode.maps.co/search/?q=1126%20Viral%20Way%20Austin,%20TX%2078701%20US
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Authorization: "[FILTERED]"
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Thu, 12 Feb 2026 07:36:01 GMT
+      Content-Type:
+      - application/json; charset=utf-8
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      Server:
+      - cloudflare
+      Nel:
+      - '{"report_to":"cf-nel","success_fraction":0.0,"max_age":604800}'
+      Access-Control-Allow-Origin:
+      - "*"
+      Report-To:
+      - '{"group":"cf-nel","max_age":604800,"endpoints":[{"url":"https://a.nel.cloudflare.com/report/v4?s=nsadIW6zGcDs7vSwLyVeL%2B10e%2FsSeFTVFZ%2Bk4C9VnmUJf8qPgoo8mWYx6oDDR7fxEliDzsSwEmibefTsFqCG%2FTmaA2TADJ%2BvZpJQfg%3D%3D"}]}'
+      Cf-Cache-Status:
+      - BYPASS
+      Vary:
+      - accept-encoding
+      Cf-Ray:
+      - 9cca69a13b428f0d-IAH
+      Alt-Svc:
+      - h3=":443"; ma=86400
+    body:
+      encoding: ASCII-8BIT
+      string: "[]"
+  recorded_at: Thu, 12 Feb 2026 07:36:01 GMT
+recorded_with: VCR 6.4.0

@@ -1,0 +1,51 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://geocode.maps.co/search/?q=1400%20Congress%20Avenue,%20Austin,%20TX%2078701%20US
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Authorization: "[FILTERED]"
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Thu, 12 Feb 2026 06:48:26 GMT
+      Content-Type:
+      - application/json; charset=utf-8
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      Server:
+      - cloudflare
+      Nel:
+      - '{"report_to":"cf-nel","success_fraction":0.0,"max_age":604800}'
+      Access-Control-Allow-Origin:
+      - "*"
+      Cf-Cache-Status:
+      - BYPASS
+      Vary:
+      - accept-encoding
+      Report-To:
+      - '{"group":"cf-nel","max_age":604800,"endpoints":[{"url":"https://a.nel.cloudflare.com/report/v4?s=%2BKLiE5y33ieRoQj%2BaUCP4iCKkZRFf6szd80breHA%2Fn7GmA%2FBs9jB6hj6lTNbenbfu46QiUYshn%2FnAcG5yFQkg8KR1P2ZLUlksF%2Bn%2FA%3D%3D"}]}'
+      Cf-Ray:
+      - 9cca23effe62c308-IAH
+      Alt-Svc:
+      - h3=":443"; ma=86400
+    body:
+      encoding: ASCII-8BIT
+      string: !binary |-
+        W3sicGxhY2VfaWQiOjMzMDkzMDQ1NSwibGljZW5jZSI6IkRhdGEgwqkgT3BlblN0cmVldE1hcCBjb250cmlidXRvcnMsIE9EYkwgMS4wLiBodHRwOi8vb3NtLm9yZy9jb3B5cmlnaHQiLCJvc21fdHlwZSI6Im5vZGUiLCJvc21faWQiOjM4NTAwNTA2NjQsImxhdCI6IjMwLjI3NjYyMDAiLCJsb24iOiItOTcuNzM5NzY3MCIsImNsYXNzIjoicGxhY2UiLCJ0eXBlIjoiaG91c2UiLCJwbGFjZV9yYW5rIjozMCwiaW1wb3J0YW5jZSI6Ny40OTQzOTIzMDk0NDg0MTNlLTA1LCJhZGRyZXNzdHlwZSI6InBsYWNlIiwibmFtZSI6IiIsImRpc3BsYXlfbmFtZSI6IjE0MDAsIENvbmdyZXNzIEF2ZW51ZSwgQXVzdGluLCBUcmF2aXMgQ291bnR5LCBUZXhhcywgNzg3MDEsIFVuaXRlZCBTdGF0ZXMiLCJhZGRyZXNzIjp7ImhvdXNlX251bWJlciI6IjE0MDAiLCJyb2FkIjoiQ29uZ3Jlc3MgQXZlbnVlIiwiY2l0eSI6IkF1c3RpbiIsImNvdW50eSI6IlRyYXZpcyBDb3VudHkiLCJzdGF0ZSI6IlRleGFzIiwiSVNPMzE2Ni0yLWx2bDQiOiJVUy1UWCIsInBvc3Rjb2RlIjoiNzg3MDEiLCJjb3VudHJ5IjoiVW5pdGVkIFN0YXRlcyIsImNvdW50cnlfY29kZSI6InVzIn0sImV4dHJhdGFncyI6bnVsbCwibmFtZWRldGFpbHMiOm51bGwsImJvdW5kaW5nYm94IjpbIjMwLjI3NjU3MDAiLCIzMC4yNzY2NzAwIiwiLTk3LjczOTgxNzAiLCItOTcuNzM5NzE3MCJdfV0=
+  recorded_at: Thu, 12 Feb 2026 06:48:26 GMT
+recorded_with: VCR 6.4.0
