@@ -11,6 +11,7 @@ class WeatherApi
   
   def initialize(location_data)
     @location_data = location_data
+    self.class.headers 'key' => ENV['WEATHER_API_COM_API_KEY']
   end
 
   def get_forecast
@@ -34,13 +35,13 @@ class WeatherApi
   private
 
   def get_url_params(type)
-    "/#{type}.json?key=#{ENV['WEATHER_API_COM_API_KEY']}&q=#{convert_location_hash}"
+    "/#{type}.json?q=#{convert_location_hash}"
   end
 
   # Method: convert_location_hash
   # Receives a hash and expectss two keys of lat and lon.
   # Example: {"lat" => "30.2766200", "lon" => "-97.7397670"}
   def convert_location_hash
-    location_data["lat"] +','+ location_data["lon"]
+    location_data["lat"] + ',' + location_data["lon"]
   end
 end

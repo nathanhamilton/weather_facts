@@ -1,1 +1,9 @@
-<h1>Hello there</h1>
+<h1>Hello there!</h1>
+
+<h4>Great to see you today. Put in your address and let's check your Weather Facts!</h4>
+<p>Hint: You can either put in your full address OR use the second form to get more precise info</p>
+
+<%= form_with url: '/home', method: :post do |f| %>
+  <%= f.search_field :query, placeholder: 'Go ahead, your weather facts await!' %>
+  <%= f.submit 'Look it up' %>
+<% end %>

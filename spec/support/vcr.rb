@@ -4,6 +4,7 @@ require 'webmock/rspec'
 WebMock.disable_net_connect!(allow_localhost: true)
 
 VCR.configure do |config|
+  # config.debug_logger = $stderr
   config.cassette_library_dir = Rails.root.join('spec', 'cassettes')
   config.ignore_localhost = true
   config.hook_into :webmock
@@ -14,7 +15,7 @@ VCR.configure do |config|
   }
   config.before_record do |interaction|
     interaction.request.headers['Authorization'] = '[FILTERED]'
-    interaction.request.uri[ENV['WEATHER_API_COM_API_KEY']] = '[FILTERED]'
+    interaction.request.headers['key'] = '[FILTERED]'
   end
 
   RSpec.configure do |config|

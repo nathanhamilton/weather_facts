@@ -16,6 +16,7 @@ RSpec.describe WeatherApi do
   end
 
   describe '#get_forcast' do
+
     context 'when the data provided is correct' do
       it 'returns the forcast data' do
         location_hash = {"lat" => "30.2766200", "lon" => "-97.7397670"}
@@ -45,22 +46,12 @@ RSpec.describe WeatherApi do
   context 'private methods' do
 
     describe '#get_url_params' do
-      before(:each) do
-        # Temporarily modifying the value so that it's not shown in the test
-        @temp_api_key_value = ENV['WEATHER_API_COM_API_KEY']
-        ENV['WEATHER_API_COM_API_KEY'] = '123456789'
-      end
-
-      after(:each) do
-        ENV['WEATHER_API_COM_API_KEY'] = @temp_api_key_value
-      end
-
       it 'returns the specific url required for submitting a request to weather api' do
         location_hash = {"lat" => "30.2766200", "lon" => "-97.7397670"}
         api_instance = WeatherApi.new(location_hash)
         url_params = api_instance.send('get_url_params', 'forecast')
 
-        expect(url_params).to eq '/forecast.json?key=123456789&q=30.2766200,-97.7397670'
+        expect(url_params).to eq '/forecast.json?q=30.2766200,-97.7397670'
       end
     end
 
