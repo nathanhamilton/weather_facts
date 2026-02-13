@@ -1,7 +1,7 @@
 <h1>Welcome to Weather Facts!</h1>
 
 <h4>Great to see you today. Put in your address and let's check your Weather Facts!</h4>
-<p>Hint: You can either put in your full address OR your postal code with your two diget country code</p>
+<p>Hint: You can either put in your full address OR your postal code with your two digit country code</p>
 
 <%= form_with url: '/home', method: :post, id: :weather_facts_form do |f| %>
   <%= f.search_field :query, placeholder: 'Go ahead, your weather facts await!' %>
