@@ -8,3 +8,25 @@
  *
  * Consider organizing styles into separate files for maintainability.
  */
+
+ table {
+  border-collapse: collapse;
+  border: 5px
+ }
+
+ th, td {
+  padding: 10px;
+  text-align: center;
+ }
+
+table, th, td {
+  border: 1px solid black;
+}
+
+#condition {
+  display: grid;
+}
+
+form, #weather_facts_form {
+  margin-bottom: 80px
+}

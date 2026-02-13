@@ -3,8 +3,8 @@ class GeocodeApi
   class ApiError < StandardError; end
 
   include HTTParty
-  include IntegrationHelpers
-
+  include IntegrationHelper
+  
   base_uri 'https://geocode.maps.co/search'
 
   attr_reader :options
@@ -22,8 +22,7 @@ class GeocodeApi
     raise GoecodeApi::ApiError unless success?(result)
     raise GeocodeApi::NoDataFound if success_but_no_data?(result)
 
-    json_body = JSON.parse(result.body).first
-    json_body.select { |key, value| %w[lat lon].include?(key) }
+    JSON.parse(result.body).first
   end
 
   def retrieve_from_structured
@@ -34,7 +33,4 @@ class GeocodeApi
 
     JSON.parse(result.body).first
   end
-
-  private
-
-  end
+end

@@ -7,11 +7,14 @@ gem "puma", ">= 5.0"
 gem "rails", "~> 8.1.2"
 gem "solid_cache", "~> 1.0"
 gem "sqlite3", ">= 2.1"
+gem 'turbo-rails', '~> 1.4'    
 gem "tzinfo-data", platforms: %i[ windows jruby ]
 gem "webmock", "~> 3.26"
 gem 'vcr', '~> 6.0'
 
 group :development, :test do
+  gem 'better_errors', '~> 2.9', '>= 2.9.1'
+  gem 'binding_of_caller', '~> 1.0'
   gem 'byebug', '~> 11.1', '>= 11.1.3'
   gem 'dotenv-rails', '~> 3.2'
   gem 'rspec-rails', '~> 8.0.0'

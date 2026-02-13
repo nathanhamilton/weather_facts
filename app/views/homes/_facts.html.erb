@@ -1,0 +1,52 @@
+<h2>
+  Here are your weather facts for
+  <%= @weather_facts['location']['name'] %>, <%= @weather_facts['location']['region'] %> <%= @weather_facts['location']['country'] %>
+</h2>
+<div> Cached: <%= @weather_facts[:cached] %></div>
+<h3>Here is today's Forecast:</h3>
+<p> <%= @weather_facts['current']['temp_c'] %>°C / <%= @weather_facts['current']['temp_f'] %>°F </p>
+<table>
+  <tr>
+    <th>Last Updated</th>
+    <th>Temp</th>
+    <th>Humidity</th>
+    <th>Condition</th>
+    <th>Wind Direction</th>
+  </tr>
+  <tr>
+    <td> <%= @weather_facts['current']['last_updated'] %></td>
+    <td> <%= @weather_facts['current']['temp_c'] %>°C / <%= @weather_facts['current']['temp_f'] %>°F </td>
+    <td> <%= @weather_facts['current']['humidity'] %>%</td>
+    <td> 
+      <div id="condition">
+        <%= @weather_facts['current']['condition']['text'] %>
+        <%= image_tag(@weather_facts['current']['condition']['icon']) %>
+      </div>
+    </td>
+    <td> <%= @weather_facts['current']['wind_dir'] %></td>
+  </tr>
+</table>
+<h3>Here are your upcoming forecasted weather facts by hour:</h3>
+<table>
+  <tr>
+    <th>Hour</th>
+    <th>Temp</th>
+    <th>Humidity</th>
+    <th>Condition</th>
+    <th>Chance of Rain</th>
+  </tr>
+  <% @weather_facts['forecast']['forecastday'][0]['hour'].each do |hour| %>
+    <tr>
+      <td> <%= hour['time'] %></td>
+      <td> <%= hour['temp_c'] %>°C / <%= hour['temp_f'] %>°F </td>
+      <td> <%= hour['humidity'] %>%</td>
+      <td> 
+        <div id="condition">
+          <%= hour['condition']['text'] %>
+          <%= image_tag(hour['condition']['icon']) %>
+        </div>
+      </td>
+      <td> <%= hour['chance_of_rain'] %>%</td>
+    </tr>
+  <% end %>
+<table>

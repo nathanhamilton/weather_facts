@@ -3,7 +3,7 @@ class WeatherApi
   class NoDataFound < StandardError; end
 
   include HTTParty
-  include IntegrationHelpers
+  include IntegrationHelper
 
   base_uri 'https://api.weatherapi.com/v1'
 
@@ -35,13 +35,6 @@ class WeatherApi
   private
 
   def get_url_params(type)
-    "/#{type}.json?q=#{convert_location_hash}"
-  end
-
-  # Method: convert_location_hash
-  # Receives a hash and expectss two keys of lat and lon.
-  # Example: {"lat" => "30.2766200", "lon" => "-97.7397670"}
-  def convert_location_hash
-    location_data["lat"] + ',' + location_data["lon"]
+    "/#{type}.json?q=#{location_data}"
   end
 end

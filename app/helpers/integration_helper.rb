@@ -1,6 +1,4 @@
-module IntegrationHelpers
-
-  private
+module IntegrationHelper
 
   def success?(result)
     result.response.code.to_i == 200
