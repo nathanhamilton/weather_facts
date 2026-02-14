@@ -9,7 +9,7 @@ This is a minimalistic Ruby on Rails application built using the following stack
 
 ## Before you begin:
 
-There are a couple of steps that you will need to follow before launching this app on your location machine.
+There are a couple of steps that you will need to follow before launching this app on your local machine.
 
 ### Prerequisits
 This application assumes you have installed ruby 3.4.8 locally. To find out how to do this on your machine, visit [https://www.ruby-lang.org/en/documentation/installation/](https://www.ruby-lang.org/en/documentation/installation/)
